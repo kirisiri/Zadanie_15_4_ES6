@@ -18,7 +18,7 @@ const multiply = (x = 1, y = 1) =>  {
 multiply(5,6);  */
 
 /* Zadanie 3 - ( nie potrafie petli for przeksztalcic na EC6  :/ - and believe me: I tried!
-*/
+
 var average = (...liczby) => {
 	var suma = 0;
 	for (var i=0;  i < liczby.length; i++) {
@@ -27,7 +27,19 @@ var average = (...liczby) => {
 	var srednia = suma / liczby.length;
 	console.log(srednia);
 }
-average(2,2,4,8);    
+average(2,2,4,8);    */
+
+
+const average = (...args) => {
+	let sum=0;
+	args.forEach(arg => {
+		sum += arg;
+	});
+	let srednia = sum/args.length;
+	console.log(srednia);
+};
+average(1,3,6,6);
+
 
 
 /* Zadanie 4 
